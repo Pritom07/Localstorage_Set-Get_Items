@@ -7,15 +7,17 @@ const getLocalstorageItem = () => {
     return [];
 }
 
-const addItem = (id) => {
-    const cart = getLocalstorageItem();
-    cart.push(id);
-    setItem(cart);
-}
-
 const setItem = (cart) => {
     const stringified = JSON.stringify(cart);
     localStorage.setItem('cart', stringified);
+}
+
+const addItem = (id) => {
+    const cart = getLocalstorageItem();
+    if (cart) {
+        cart.push(id);
+    }
+    setItem(cart);
 }
 
 export { addItem }
