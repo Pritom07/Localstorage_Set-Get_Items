@@ -20,4 +20,10 @@ const addItem = (id) => {
     setItem(cart);
 }
 
-export { addItem }
+const removeItem = (id) => {
+    const cart = getLocalstorageItem();
+    const updatedcart = cart.filter(idx => idx !== id);
+    setItem(updatedcart);
+}
+
+export { addItem, removeItem, getLocalstorageItem }

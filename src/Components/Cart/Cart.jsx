@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './Cart.css'
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, removecartitems }) => {
     return (
         <div>
             <h3>Cart Added Items : {cartItems.length}</h3>
@@ -9,7 +9,7 @@ const Cart = ({ cartItems }) => {
                 {
                     cartItems.map((bottle) => <div key={bottle.id} style={{ border: '2px solid green', borderRadius: '6px', padding: '8px' }}>
                         <img src={bottle.img} className='cart-img'></img><br />
-                        <button style={{ border: '1px solid red', borderRadius: '8px', margin: '10px', fontWeight: 650, color: 'black', backgroundColor: 'red' }}>REMOVE</button>
+                        <button onClick={() => removecartitems(bottle.id)} style={{ border: '1px solid red', borderRadius: '8px', margin: '10px', fontWeight: 650, color: 'black', backgroundColor: 'red' }}>REMOVE</button>
                     </div>)
                 }
             </div>
@@ -18,6 +18,7 @@ const Cart = ({ cartItems }) => {
 };
 
 Cart.propTypes = {
-    cartItems: PropTypes.array.isRequired
+    cartItems: PropTypes.array.isRequired,
+    removecartitems: PropTypes.func.isRequired
 }
 export default Cart;
