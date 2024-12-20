@@ -5,10 +5,27 @@
 }
 
 .bottle-name {
-    color: orangered;
+    color: rebeccapurple;
 }
 
 .bottle-img {
     width: 140px;
     height: 120px;
+}
+
+.add_button {
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: inset 2px 3px 2px gray;
+    font-weight: 650;
+    color: black;
+}
+
+.add-cart {
+    color: green;
+    background-color: yellow;
+    border-radius: 8px;
+    margin: 10px;
+    font-weight: 650;
 }

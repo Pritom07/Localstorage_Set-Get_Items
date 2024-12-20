@@ -1,0 +1,11 @@
+.added-bottle {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 13px;
+    margin: 3%;
+}
+
+.cart-img {
+    width: 120px;
+    height: 100px;
+}
