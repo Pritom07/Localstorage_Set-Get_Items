@@ -1,0 +1,14 @@
+.bottle {
+    border: 2px solid grey;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.bottle-name {
+    color: orangered;
+}
+
+.bottle-img {
+    width: 140px;
+    height: 120px;
+}
