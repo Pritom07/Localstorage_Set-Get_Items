@@ -9,7 +9,7 @@ const Bottles = () => {
     const [cartItems, setcartitems] = useState([]);
 
     useEffect(() => {
-        fetch('../public/bottles.json')
+        fetch('bottles.json')
             .then(res => res.json())
             .then(data => Setbottles(data))
     }, [])
